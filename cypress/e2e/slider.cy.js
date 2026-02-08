@@ -6,7 +6,7 @@ describe('Swiper Gallery Test 1', { tags: ['@bvt'] }, function () {
   });
 });
 
-describe('Swiper Gallery Test 2', { tags: ['@must'] },function () {
+describe('Swiper Gallery Test 2', { tags: ['@must', '@flaky'] },function () {
   it('Checks if third slide contains "Paris"', function () {
     cy.visit('http://localhost:3000');
     cy.get('.swiper-button-next').click();

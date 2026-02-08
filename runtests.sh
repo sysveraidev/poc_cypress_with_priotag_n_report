@@ -10,7 +10,7 @@ set -e
 # ============================================
 usage() {
   echo ""
-  echo "Usage: ./run-cypress.sh [bvt|must|should|could]"
+  echo "Usage: ./run-cypress.sh [bvt|must|should|could|flaky]"
   echo ""
   exit 1
 }
@@ -39,6 +39,9 @@ case "$PRIORITY" in
     ;;
   could)
     TAG="@could"
+    ;;
+  flaky)
+    TAG="@flaky"
     ;;
   *)
     echo "❌ Invalid priority: $PRIORITY"

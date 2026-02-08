@@ -16,6 +16,7 @@ if /i "%PRIORITY%"=="bvt" set "TAG=@bvt"
 if /i "%PRIORITY%"=="must" set "TAG=@must"
 if /i "%PRIORITY%"=="should" set "TAG=@should"
 if /i "%PRIORITY%"=="could" set "TAG=@could"
+if /i "%PRIORITY%"=="flaky" set "TAG=@flaky"
 
 if "%TAG%"=="" (
   echo Invalid priority: %PRIORITY%
@@ -50,6 +51,6 @@ exit /b 1
 
 :usage
 echo.
-echo Usage: runtests.cmd [bvt^|must^|should^|could]
+echo Usage: runtests.cmd [bvt^|must^|should^|could^|flaky]
 echo.
 exit /b 1
